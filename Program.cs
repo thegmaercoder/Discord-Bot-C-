@@ -17,7 +17,7 @@ namespace ConsoleApp4
         DiscordSocketClient dsc;
         CommandService command;
         IServiceProvider isp;
-        static void Main(string[] args) => new Program().MainAsync("NjE1MjE4MDQxNTcxMjQ2MTMx.XWK1eA.Ldf3o5h6dFNRKXgjbK7xFf3qxM0").GetAwaiter().GetResult();
+        static void Main(string[] args) => new Program().MainAsync("discord-bot-token").GetAwaiter().GetResult();
 
         public async Task MainAsync(string token) { 
                 Console.WriteLine("MYBOT creating.....");
@@ -44,7 +44,7 @@ namespace ConsoleApp4
             dsc.UserJoined += Dsc_UserJoined;
           
             Console.WriteLine("MYBOT Logining ");
-            await dsc.LoginAsync(Discord.TokenType.Bot, token);//"NjE0NTM5MjY0NjAwMDQ3NjE4.XWA8aw.G_erbTkXHt9LyuTL0jeMzStuRf4"
+            await dsc.LoginAsync(Discord.TokenType.Bot, token);
             Console.WriteLine("Logined");
 
             Console.WriteLine("MYBOT Staring");
